@@ -1,0 +1,6 @@
+[{
+        "relation": ["delegate_permission/common.handle_all_urls"],
+        "target" : { "namespace": "android_app", "package_name": "org.malaikainitiative.emun.twa",
+                     "sha256_cert_fingerprints": ["4D:3B:B1:1B:FD:90:BC:65:36:6A:99:D9:15:F2:83:DD:C1:18:96:5F:7F:E9:DA:D4:35:0F:52:E6:33:13:02:08"] }
+      }
+]

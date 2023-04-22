@@ -1,0 +1,28 @@
+{
+    "short_name": "eMuN",
+    "name": "Electronic Immune",
+    "icons": [
+      {
+        "src": "css/assets/images/logo192x192.png",
+        "type": "image/png",
+        "sizes": "192x192"
+      },
+      {
+        "src": "css/assets/images/logo512.png",
+        "type": "image/png",
+        "sizes": "512x512"
+      }
+    ],
+    "url_handlers": [
+      {
+        "origin": "https://emun.keberaorganics.com/"
+      }
+    ],
+    "id": "/index.php",
+    "start_url": "https://emun.keberaorganics.com/index.php",
+    "background_color": "#000000",
+    "display": "standalone",
+    "theme_color": "#000000",
+    "scope": "https://emun.keberaorganics.com",
+    "orientation": "portrait-primary"
+  }
