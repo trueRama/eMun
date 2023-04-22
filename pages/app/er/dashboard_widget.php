@@ -152,7 +152,7 @@ if(isset($_POST['sub'])){
                                             <div class="list-wrapper">
                                                 <ul class="todo-list todo-list-rounded">
                                                     <?php
-                                                    $sql_stories = "SELECT * FROM emun_stories order  by id DESC Limit 1";
+                                                    $sql_stories = "SELECT * FROM hub_subs WHERE user_id = '$user_id' order  by id DESC Limit 1";
                                                     $query_stories= mysqli_query($conn, $sql_stories);
                                                     $u_check_stories = mysqli_num_rows($query_stories);
                                                     if($u_check_stories > 0){
@@ -162,7 +162,7 @@ if(isset($_POST['sub'])){
                                                                 <div class="d-flex mt-2" style="margin-bottom: 100px;">
                                                                     <div class="badge badge-opacity-warning me-3"><?php echo date('d-M-Y h:i:s a'); ?></div>
                                                                 </div>
-                                                                <label class="form-check-label">No Package Selected<i class="input-helper rounded"></i><br/>
+                                                                <label class="form-check-label">Package Selected<i class="input-helper rounded"></i><br/>
                                                                     Care to Select?
                                                                 </label>
                                                             </div>
@@ -171,13 +171,11 @@ if(isset($_POST['sub'])){
                                                         <li class="d-block">
                                                             <div class="form-check w-100">
                                                                 <div class="d-flex mt-2" style="margin-bottom: 100px;">
-                                                                    <div class="badge badge-opacity-warning me-3">
-                                                                        <?php echo date('d-M-Y h:i:s a'); ?>
-                                                                    </div>
-                                                                    <label class="form-check-label">No Package Selected<i class="input-helper rounded"></i><br/>
-                                                                        Care to Select?
-                                                                    </label>
+                                                                    <div class="badge badge-opacity-warning me-3"><?php echo date('d-M-Y h:i:s a'); ?></div>
                                                                 </div>
+                                                                <label class="form-check-label">No Package Selected<i class="input-helper rounded"></i><br/>
+                                                                    Care to Select?
+                                                                </label>
                                                             </div>
                                                         </li>
                                                     <?php } ?>
