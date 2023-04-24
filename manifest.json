@@ -3,12 +3,12 @@
     "name": "Electronic Immune",
     "icons": [
       {
-        "src": "css/assets/images/logo192x192.png",
+        "src": "uploads/logo192x192.png",
         "type": "image/png",
         "sizes": "192x192"
       },
       {
-        "src": "css/assets/images/logo512.png",
+        "src": "uploads/logo512.png",
         "type": "image/png",
         "sizes": "512x512"
       }
