@@ -48,12 +48,7 @@
     "browser",
     "standalone"
   ],
-  "protocol_handlers": [
-    {
-      "protocol": "login",
-      "url": "/?page"
-    }
-  ],
+  "protocol_handlers": [],
   "shortcuts": [
     {
       "name": "/?page=login",
@@ -69,5 +64,8 @@
     }
   ],
   "description": "Health Monitoring for Sickle cell patients",
-  "lang": "en"
+  "lang": "en",
+  "dir": "auto",
+  "prefer_related_applications": false,
+  "iarc_rating_id": "12+"
 }
