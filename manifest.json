@@ -79,5 +79,13 @@
       "sizes": "750x1334",
       "type": "image/png"
     }
-  ]
+  ],
+  "share_target": {
+    "action": "/login/",
+    "method": "POST",
+    "enctype": "multipart/form-data",
+    "params": {
+      "url": "https://emun.keberaorganics.com/"
+    }
+  }
 }
