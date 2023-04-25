@@ -27,10 +27,10 @@
   ],
   "id": "/index.php",
   "start_url": "https://emun.keberaorganics.com/",
-  "background_color": "#000000",
+  "background_color": "#e4ff7c",
   "display": "standalone",
-  "theme_color": "#000000",
-  "scope": "https://emun.keberaorganics.com",
+  "theme_color": "#0ed2f1",
+  "scope": "https://emun.keberaorganics.com/*",
   "orientation": "portrait-primary",
   "categories": [
     "education",
@@ -44,13 +44,14 @@
   ],
   "display_override": [
     "window-control-overlay",
-    "standalone",
-    "browser"
+    "fullscreen",
+    "browser",
+    "standalone"
   ],
   "protocol_handlers": [
     {
       "protocol": "login",
-      "url": "https://emun.keberaorganics.com/?page=login"
+      "url": "/?page"
     }
   ],
   "shortcuts": [
@@ -66,5 +67,7 @@
       "url": "https://myplateug.com/",
       "id": "MyPlateug"
     }
-  ]
+  ],
+  "description": "Health Monitoring for Sickle cell patients",
+  "lang": "en"
 }
