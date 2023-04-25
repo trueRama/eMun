@@ -51,6 +51,17 @@ self.addEventListener('fetch', (event) => {
         })());
     }
 });
+
+async function updateArticles() {
+    const articlesCache = await caches.open(CACHE);
+    await articlesCache.add(offlineFallbackPage);
+}
+
+self.addEventListener('periodicsync', (event) => {
+    if (event.tag === 'update-articles') {
+        event.waitUntil(updateArticles());
+    }
+});
 // // On install - caching the application shell
 // self.addEventListener('install', function(event) {
 //   event.waitUntil(
