@@ -30,7 +30,7 @@
   "background_color": "#e4ff7c",
   "display": "standalone",
   "theme_color": "#0ed2f1",
-  "scope": "https://emun.keberaorganics.com/*",
+  "scope": "https://emun.keberaorganics.com/",
   "orientation": "portrait-primary",
   "categories": [
     "education",
