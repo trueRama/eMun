@@ -1,28 +1,70 @@
 {
-    "short_name": "eMuN",
-    "name": "Electronic Immune",
-    "icons": [
-      {
-        "src": "uploads/logo192x192.png",
-        "type": "image/png",
-        "sizes": "192x192"
-      },
-      {
-        "src": "uploads/logo512x512.png",
-        "type": "image/png",
-        "sizes": "512x512"
-      }
-    ],
-    "url_handlers": [
-      {
-        "origin": "https://emun.keberaorganics.com/"
-      }
-    ],
-    "id": "/index.php",
-    "start_url": "https://emun.keberaorganics.com/index.php",
-    "background_color": "#000000",
-    "display": "standalone",
-    "theme_color": "#000000",
-    "scope": "https://emun.keberaorganics.com",
-    "orientation": "portrait-primary"
-  }
+  "short_name": "eMuN",
+  "name": "Electronic Immune",
+  "icons": [
+    {
+      "src": "uploads/logo192x192.png",
+      "sizes": "192x192",
+      "type": "image/png",
+      "purpose": "any"
+    },
+    {
+      "src": "uploads/logo512x512.png",
+      "sizes": "512x512",
+      "type": "image/png",
+      "purpose": "maskable"
+    },
+    {
+      "src": "uploads/logo192x192.png",
+      "type": "image/png",
+      "sizes": "192x192"
+    },
+    {
+      "src": "uploads/logo512x512.png",
+      "type": "image/png",
+      "sizes": "512x512"
+    }
+  ],
+  "id": "/index.php",
+  "start_url": "https://emun.keberaorganics.com/",
+  "background_color": "#000000",
+  "display": "standalone",
+  "theme_color": "#000000",
+  "scope": "https://emun.keberaorganics.com",
+  "orientation": "portrait-primary",
+  "categories": [
+    "education",
+    "fitness",
+    "government",
+    "health",
+    "lifestyle",
+    "medical",
+    "news",
+    "social"
+  ],
+  "display_override": [
+    "window-control-overlay",
+    "standalone",
+    "browser"
+  ],
+  "protocol_handlers": [
+    {
+      "protocol": "login",
+      "url": "https://emun.keberaorganics.com/?page=login"
+    }
+  ],
+  "shortcuts": [
+    {
+      "name": "/?page=login",
+      "url": "/?page=signup",
+      "description": "user authentication"
+    }
+  ],
+  "related_applications": [
+    {
+      "platform": "webapp",
+      "url": "https://myplateug.com/",
+      "id": "MyPlateug"
+    }
+  ]
+}
