@@ -14,7 +14,7 @@ jobs:
     - name: 📂 Sync files
       uses: SamKirkland/FTP-Deploy-Action@4.3.0
       with:
-        server: emun.keberaorganics.com
+        server: emun-app.keberaorganics.com
         username: ${{ secrets.FTP_USERNAME}}
         password: ${{ secrets.FTP_PASSWORD}}
-        server-dir: /emun.keberaorganics.com/app
+        server-dir: /emun-app.keberaorganics.com/
