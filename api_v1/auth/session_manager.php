@@ -1,5 +1,6 @@
 <?php
 //get all user details and bio
+global $conn;
 if(isset($_SESSION['username'])){
     $username = $_SESSION['username'];
 }elseif (isset($_POST['username'])){
@@ -25,7 +26,6 @@ if($checkExistance > 0){
     $address = $fetchDetails['address'];
     $message = "success";
 }
-
 //Queries
 $ed_code = "";
 if($account_type == 'doctors'){

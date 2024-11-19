@@ -1,11 +1,12 @@
 <?php
 //Handling the Login Credentials
+global $BASEURL, $conn;
 if($_SERVER['REQUEST_METHOD']=='POST'){
     $username = filter_input(INPUT_POST, 'username');
     if(isset($_POST['account_type'])){
         $account_type = filter_input(INPUT_POST, 'account_type');
     }
-    $email = filter_input(INPUT_POST, 'email');
+//    $email = filter_input(INPUT_POST, 'email');
     $contact = filter_input(INPUT_POST, 'contact');
     $password = filter_input(INPUT_POST, 'password');
     $cpassword = filter_input(INPUT_POST, 'confirm_password');
@@ -33,14 +34,18 @@ if($_SERVER['REQUEST_METHOD']=='POST'){
                 $uppercase = preg_match('@[A-Z]@', $password);
                 $lowercase = preg_match('@[a-z]@', $password);
                 $number    = preg_match('@[0-9]@', $password);
-                $specialChars = preg_match('@[^\w]@', $password);
-                if(!$uppercase || !$lowercase || !$number || !$specialChars || strlen($password) < 8) {
-                    $message = "Password should be at least 8 characters in length and should include at least one upper case letter, one lower case letter, one number, and one special character";
+//                $specialChars = preg_match('@[^\w]@', $password);
+                if(!$uppercase || !$lowercase || !$number || strlen($password) < 4) {
+                    $message = "PIN should be at least 4 characters in length and 
+                    should include at least one upper case letter, 
+                    one lower case letter, one number, and one special 
+                    character";
                 }else{
                     $message = "success";
                     $password = md5($password);
-                    $messageInsertSQL = "INSERT INTO users (username, account_type, email, contact, password)
-                    VALUES ('$username', '$account_type', '$email', '$contact', '$password')";
+                    $form_success = "yes";
+                    $messageInsertSQL = "INSERT INTO users(username, account_type, contact, password)
+                    VALUES ('$username', '$account_type', '$contact', '$password')";
                     $messageInsertQuery = mysqli_query($conn, $messageInsertSQL);
                 }
             } else {
@@ -50,7 +55,11 @@ if($_SERVER['REQUEST_METHOD']=='POST'){
         }
     }
     if(!isset($_GET['call'])) {
-        backHome($message, $BASEURL);
+        $url = "login";
+        if($form_success != "yes"){
+            $url = "signUp";
+        }
+        backHome($message, $BASEURL, $url);
     }
 }
 $user_details = array(
@@ -61,10 +70,4 @@ $user_details = array(
 );
 if(isset($_GET['call'])) {
     echo json_encode($user_details);
-}
-function backHome($message,$BASEURL){
-    echo("<SCRIPT LANGUAGE='JavaScript'>
-            window.alert('$message')
-            window.location.href='$BASEURL?page=login'
-        </SCRIPT>");
 }

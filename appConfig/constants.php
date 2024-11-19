@@ -1,5 +1,6 @@
 <?php
-$BASEURL = "https://emun.keberaorganics.com/";
+//$BASEURL = "https://emun.keberaorganics.com/app";
+$BASEURL = "http://localhost/emun/";
 $user_id = 0;
 $user_details = array();
 $first_name = "Provide firstname";
@@ -16,8 +17,13 @@ $account_type = "user";
 $user_available  = "true";
 $page = "";
 $search = "";
+$form_success = "no";
 if(isset($_GET["page"])){
     $page = $_GET["page"];
+}
+function  note_vew($notification)
+{
+    echo "<p style='color: red; font-size: 12px'>".$notification."</p>";
 }
 $api = "";
 if(isset($_GET["call"])){

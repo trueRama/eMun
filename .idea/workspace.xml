@@ -1,8 +1,28 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
+  <component name="AutoImportSettings">
+    <option name="autoReloadType" value="SELECTIVE" />
+  </component>
   <component name="ChangeListManager">
     <list default="true" id="9b1b294f-020f-4f65-8471-f59340ca05e7" name="Changes" comment="">
-      <change beforePath="$PROJECT_DIR$/sw.js" beforeDir="false" afterPath="$PROJECT_DIR$/sw.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/php.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/appConfig/app_redirect.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/pages/api_routs.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/pages/view_routs.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.github/workflows/eMun.yml" beforeDir="false" afterPath="$PROJECT_DIR$/.github/workflows/eMun.yml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/dataSources.local.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/api_v1/auth/check_login.php" beforeDir="false" afterPath="$PROJECT_DIR$/api_v1/auth/check_login.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/api_v1/auth/loginController.php" beforeDir="false" afterPath="$PROJECT_DIR$/api_v1/auth/loginController.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/api_v1/auth/reset.php" beforeDir="false" afterPath="$PROJECT_DIR$/api_v1/auth/reset.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/api_v1/auth/session_manager.php" beforeDir="false" afterPath="$PROJECT_DIR$/api_v1/auth/session_manager.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/api_v1/auth/sign-upController.php" beforeDir="false" afterPath="$PROJECT_DIR$/api_v1/auth/sign-upController.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/appConfig/constants.php" beforeDir="false" afterPath="$PROJECT_DIR$/appConfig/constants.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/appConfig/db_connect.php" beforeDir="false" afterPath="$PROJECT_DIR$/appConfig/db_connect.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/includes/side_bar.php" beforeDir="false" afterPath="$PROJECT_DIR$/includes/side_bar.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/index.php" beforeDir="false" afterPath="$PROJECT_DIR$/index.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/pages/auth/sign_up.php" beforeDir="false" afterPath="$PROJECT_DIR$/pages/auth/sign_up.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/pages/routs.php" beforeDir="false" afterPath="$PROJECT_DIR$/pages/routs.php" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -20,6 +40,9 @@
       </list>
     </option>
   </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+  </component>
   <component name="MarkdownSettingsMigration">
     <option name="stateVersion" value="1" />
   </component>
@@ -27,19 +50,34 @@
     <option name="enabled" value="true" />
     <option name="isEnabled" value="true" />
   </component>
+  <component name="PhpWorkspaceProjectConfiguration" interpreter_name="C:\xampp\php\php.exe" />
+  <component name="ProjectColorInfo"><![CDATA[{
+  "associatedIndex": 2
+}]]></component>
   <component name="ProjectId" id="2O3MA5r89iUyqO0ExpyNZ0OuaM6" />
-  <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
+  <component name="ProjectLevelVcsManager" settingsEditedManually="true">
+    <ConfirmationsSetting value="2" id="Add" />
+  </component>
   <component name="ProjectViewState">
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
   <component name="PropertiesComponent"><![CDATA[{
   "keyToString": {
+    "ASKED_SHARE_PROJECT_CONFIGURATION_FILES": "true",
     "DefaultHtmlFileTemplate": "HTML File",
     "RunOnceActivity.OpenProjectViewOnStart": "true",
     "RunOnceActivity.ShowReadmeOnStart": "true",
+    "RunOnceActivity.git.unshallow": "true",
+    "SHARE_PROJECT_CONFIGURATION_FILES": "true",
     "WebServerToolWindowFactoryState": "false",
-    "last_opened_file_path": "C:/xampp/htdocs/emun",
+    "git-widget-placeholder": "master",
+    "ignore.virus.scanning.warn.message": "true",
+    "last_opened_file_path": "C:/xampp/htdocs/keberaWebapp",
+    "node.js.detected.package.eslint": "true",
+    "node.js.detected.package.tslint": "true",
+    "node.js.selected.package.eslint": "(autodetect)",
+    "node.js.selected.package.tslint": "(autodetect)",
     "nodejs_package_manager_path": "npm",
     "vue.rearranger.settings.migration": "true"
   }
@@ -58,6 +96,14 @@
       <recent name="C:\xampp\htdocs\emun\pages\app\er" />
       <recent name="C:\xampp\htdocs\emun\api_v1" />
     </key>
+  </component>
+  <component name="SharedIndexes">
+    <attachedChunks>
+      <set>
+        <option value="bundled-js-predefined-d6986cc7102b-e768b9ed790e-JavaScript-PS-243.21565.202" />
+        <option value="bundled-php-predefined-a98d8de5180a-5fbe0c30323e-com.jetbrains.php.sharedIndexes-PS-243.21565.202" />
+      </set>
+    </attachedChunks>
   </component>
   <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
   <component name="TaskManager">
@@ -92,6 +138,7 @@
       <workItem from="1682341965744" duration="1044000" />
       <workItem from="1682345814581" duration="2441000" />
       <workItem from="1682410354177" duration="8940000" />
+      <workItem from="1731997759493" duration="5532000" />
     </task>
     <servers />
   </component>

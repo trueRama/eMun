@@ -1,4 +1,5 @@
 <?php
+global $BASEURL, $conn;
 $message = "Provide Correct Username or Password";
 if($_SERVER['REQUEST_METHOD']=='POST'){
     $username = $_POST['username'];
@@ -35,7 +36,7 @@ if(isset($_GET['call'])){
     echo json_encode($user_details);
 }else{
     echo("<SCRIPT LANGUAGE='JavaScript'>
-            window.alert('$message')
-            window.location.href='$BASEURL'
-        </SCRIPT>");
+        window.alert('$message')
+        window.location.href='$BASEURL'
+    </SCRIPT>");
 }
