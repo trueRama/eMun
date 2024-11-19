@@ -1,5 +1,5 @@
 <?php
-$BASEURL = "https://emun.keberaorganics.com/app";
+$BASEURL = "https://emun-app.keberaorganics.com/";
 //$BASEURL = "http://localhost/emun/";
 $user_id = 0;
 $user_details = array();
