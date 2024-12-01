@@ -6,6 +6,7 @@ if(isset($_SESSION['user_id'])){
     include ("includes/content_start.php");
     if($page != ""){
         $access = $_SESSION['user_id'];
+        echo $access;
         if($access == ""){
             echo header("location:$BASEURL");
         }
