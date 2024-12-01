@@ -16,13 +16,6 @@ if(isset($_POST['eId'])){
     $er_Id = filter_input(INPUT_GET, 'eId');
     $error = filter_input(INPUT_GET, 'message');
 }
-$recode_data = "";
-//if logged-in user
-if($account_type == "user"){
-    $recode_data = " AND user_id = '$user_id'";
-}
-//if logged-in Doctor
-
 //get detail
 $sql_farms = "SELECT * FROM emun_er WHERE id = '$er_Id' $recode_data";
 $query_farms = mysqli_query($conn, $sql_farms);
@@ -41,6 +34,20 @@ if($u_check_farms > 0){
     $emergency = $row['emergency'];
     $er_image = $row['er_image'];
     $p_id = $row['user_id'];
+    //get $Patient_name= "";
+    //$Patient_contact= "";
+    //$Patient_email= "";
+    //$Patient_address= "";
+    $sql_p = "SELECT * FROM users WHERE id = '$p_id'";
+    $query_p = mysqli_query($conn, $sql_p);
+    $u_check_p = mysqli_num_rows($query_p);
+    if($u_check_p > 0) {
+        $row_p = mysqli_fetch_array($query_p, MYSQLI_ASSOC);
+        $Patient_name= $row_p['last_name']." ".$row_p['first_name'];
+        $Patient_contact= $row_p['contact'];
+        $Patient_email= $row_p['email'];
+        $Patient_address= $row_p['address'];
+    }
     $ed_code = $row['ed_code'];
     $date_created = $row['date_created'];
     $assign_date = $row['assign_date'];
@@ -155,6 +162,12 @@ if($_SERVER['REQUEST_METHOD']=='POST'){
                                 Emergency: <?php echo $emergency; ?><br/>
                                 eMun Doctor: <?php echo $ed_code; ?><br/>
                                 Date & Time: <?php echo $date_created; ?><br/>
+                                =====================<br/>
+                                Patient Name: <?php echo $Patient_name; ?><br/>
+                                Patient Contact: <?php echo $Patient_contact; ?><br/>
+                                Patient Email: <?php echo $Patient_email; ?><br/>
+                                Patient Address: <?php echo $Patient_address; ?><br/>
+                                =====================<br/>
                                 Status: <?php echo $statusMessage; if($status == 0) { ?><br/>
                                  <?php if($account_type == 'user'){ ?>
                                 <form method="post" action="<?php echo $BASEURL; ?>?page=er_details">

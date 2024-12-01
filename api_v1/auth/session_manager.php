@@ -28,6 +28,7 @@ if($checkExistance > 0){
 }
 //Queries
 $ed_code = "";
+$recode_data_doctor = "";
 if($account_type == 'doctors'){
     //check user
     $sql_checks= "SELECT * FROM emun_doctor WHERE user_id = '$user_id' ";
@@ -36,11 +37,21 @@ if($account_type == 'doctors'){
     if($u_check_checks > 0){
         $row_checks = mysqli_fetch_array($query_checks, MYSQLI_ASSOC);
         $ed_code = "ed_code = '".$row_checks['ed_code']."' and ";
+        $recode_data_doctor = $row_checks['ed_code'];
     }
 }elseif ($account_type == 'user'){
     $ed_code = "user_id = '$user_id' and ";
 }
 //app notification
+$recode_data = "";
+//if logged-in user
+if($account_type == "user"){
+    $recode_data = " AND user_id = '$user_id'";
+}
+//if logged-in Doctor
+if($account_type == "doctor"){
+    $recode_data = " AND ed_code = '$recode_data_doctor'";
+}
 //emergencies
 $not_er = "SELECT * FROM emun_er WHERE status = 0 order  by id DESC";
 if($account_type != "admin"){

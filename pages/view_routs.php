@@ -6,7 +6,6 @@ if(isset($_SESSION['user_id'])){
     include ("includes/content_start.php");
     if($page != ""){
         $access = $_SESSION['user_id'];
-        echo $access;
         if($access == ""){
             echo header("location:$BASEURL");
         }
@@ -67,8 +66,10 @@ if(isset($_SESSION['user_id'])){
             }
             //logout user
             session_destroy();
-//            echo header("location:$BASEURL");
-            echo "<meta http-equiv='refresh'; url='$BASEURL'>";
+//          echo header("location:$BASEURL");
+            redirect("Account Logged Out","$BASEURL");
+        }else{
+            redirect("","$BASEURL");
         }
     }else{
         include ("pages/app/dashboard.php");

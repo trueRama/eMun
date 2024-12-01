@@ -37,6 +37,12 @@ if($account_type != 'user') {
         $sql_farms = "SELECT * FROM emun_er WHERE $ed_code user_id = '$my_search' and status = 0 order  by id DESC LIMIT $this_page_first_result , $results_per_page";
     }
 }
+
+if($account_type == "user"){
+    $view_details = 1;
+}elseif ($account_type == "admin"){
+    $view_details = 1;
+}
 //set page results
 $result = mysqli_query($conn, $sql_farms);
 ?>
@@ -91,12 +97,25 @@ $result = mysqli_query($conn, $sql_farms);
                                                                 $er_pic = "appStyle/logo.png";
                                                             }
                                                             //doctor details
+                                                            $er_user_id = $row['user_id'];
                                                             $ed_code = $row['ed_code'];
                                                             if($ed_code == NULL){
                                                                 $ed_code = "Not Assigned";
                                                             }
+                                                            if($account_type != 'doctor') {
+                                                                if($recode_data_doctor == $ed_code){
+                                                                    $view_details = 1;
+                                                                }
+                                                                //assigned to
+                                                                $sql_doc= "SELECT * FROM emun_doctor WHERE ed_code = '$ed_code' ";
+                                                                $query_doc= mysqli_query($conn, $sql_doc);
+                                                                $u_check_doc= mysqli_num_rows($query_doc);
+                                                                if($u_check_doc > 0){
+                                                                    $row_check_doc = mysqli_fetch_array($query_doc, MYSQLI_ASSOC);
+                                                                    $er_user_id = $row_check_doc['user_id'];
+                                                                }
+                                                            }
                                                             //patient Details
-                                                            $er_user_id = $row['user_id'];
                                                             $sql_check = "SELECT * FROM users WHERE id = '$er_user_id' ";
                                                             $query_check= mysqli_query($conn, $sql_check);
                                                             $u_check_check = mysqli_num_rows($query_check);
@@ -136,10 +155,14 @@ $result = mysqli_query($conn, $sql_farms);
                                                                                 <h6 class="mmShow">eMun Doctor: <?php echo $ed_code; ?></h6>
                                                                                 <h6 class="mmShow">Assigned to: <?php echo $p_username; ?></h6>
                                                                             </p>
+                                                                            <?php if($view_details != 0){ ?>
                                                                             <form method="post" action="<?php echo $BASEURL; ?>?page=er_details">
                                                                                 <input type="hidden"  name="eId" value="<?php echo $eId; ?>" >
-                                                                                <button type="submit" style="border: 0px; " class="badge badge-opacity-danger" name="editId">View Details</button>
+                                                                                <button type="submit" style="border: 0px; " class="badge badge-opacity-danger" name="editId">
+                                                                                    View Details
+                                                                                </button>
                                                                             </form>
+                                                                            <?php } ?>
                                                                         </div>
                                                                     </div>
                                                                 </td>

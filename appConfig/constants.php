@@ -18,6 +18,12 @@ $user_available  = "true";
 $page = "";
 $search = "";
 $form_success = "no";
+$view_details = 0;
+$Patient_name= "";
+$Patient_contact= "";
+$Patient_email= "";
+$Patient_address= "";
+
 if(isset($_GET["page"])){
     $page = $_GET["page"];
 }
