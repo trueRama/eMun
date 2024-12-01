@@ -16,12 +16,19 @@ if(isset($_POST['eId'])){
     $er_Id = filter_input(INPUT_GET, 'eId');
     $error = filter_input(INPUT_GET, 'message');
 }
+$recode_data = "";
+//if logged-in user
+if($account_type == "user"){
+    $recode_data = " AND user_id = '$user_id'";
+}
+//if logged-in Doctor
+
 //get detail
-$sql_farms = "SELECT * FROM emun_er WHERE id = '$er_Id'";
+$sql_farms = "SELECT * FROM emun_er WHERE id = '$er_Id' $recode_data";
 $query_farms = mysqli_query($conn, $sql_farms);
 $u_check_farms = mysqli_num_rows($query_farms);
 //get records
-$sql_records = "SELECT * FROM er_records WHERE er_id = '$er_Id'";
+$sql_records = "SELECT * FROM er_records WHERE er_id = '$er_Id' $recode_data";
 $query_records = mysqli_query($conn, $sql_records);
 $u_check_records = mysqli_num_rows($query_records);
 //select doctors
@@ -47,7 +54,6 @@ if(isset($_POST['assign'])){
     $emun_doctor = $_POST['emun_doctor'];
     //update emergency
     mysqli_query($conn, "update emun_er set ed_code ='$emun_doctor' where id='$er_Id' ")or die(mysqli_query($conn));
-
 }
 //mark emergency as complete
 if(isset($_POST['complete'])){
