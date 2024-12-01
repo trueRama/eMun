@@ -67,7 +67,8 @@ if(isset($_SESSION['user_id'])){
             }
             //logout user
             session_destroy();
-            echo header("location:$BASEURL");
+//            echo header("location:$BASEURL");
+            echo "<meta http-equiv='refresh'; url='$BASEURL'>";
         }
     }else{
         include ("pages/app/dashboard.php");
