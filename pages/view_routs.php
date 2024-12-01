@@ -5,6 +5,10 @@ include ("includes/header.php");
 if(isset($_SESSION['user_id'])){
     include ("includes/content_start.php");
     if($page != ""){
+        $access = $_SESSION['user_id'];
+        if($access == ""){
+            echo header("location:$BASEURL");
+        }
         //app page routs
         if($page == "addDoctors"){
             //add doctors to the system
