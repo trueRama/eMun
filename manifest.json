@@ -26,11 +26,11 @@
     }
   ],
   "id": "/index.php",
-  "start_url": "https://emun.keberaorganics.com/",
+  "start_url": "https://emun-app.keberaorganics.com/",
   "background_color": "#e4ff7c",
   "display": "standalone",
   "theme_color": "#0ed2f1",
-  "scope": "https://emun.keberaorganics.com/",
+  "scope": "https://emun-app.keberaorganics.com/",
   "orientation": "portrait-primary",
   "categories": [
     "education",
@@ -51,8 +51,8 @@
   "protocol_handlers": [],
   "shortcuts": [
     {
-      "name": "/?page=login",
-      "url": "/?page=signup",
+      "name": "/",
+      "url": "/?page=signUp",
       "description": "user authentication"
     }
   ],
@@ -85,7 +85,7 @@
     "method": "POST",
     "enctype": "multipart/form-data",
     "params": {
-      "url": "https://emun.keberaorganics.com/"
+      "url": "https://emun-app.keberaorganics.com/"
     }
   }
 }
