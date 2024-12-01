@@ -5,13 +5,8 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="9b1b294f-020f-4f65-8471-f59340ca05e7" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/api_v1/system_redirect.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/api_v1/auth/session_manager.php" beforeDir="false" afterPath="$PROJECT_DIR$/api_v1/auth/session_manager.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/appConfig/constants.php" beforeDir="false" afterPath="$PROJECT_DIR$/appConfig/constants.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/index.php" beforeDir="false" afterPath="$PROJECT_DIR$/index.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/pages/admin/unassigned_ers.php" beforeDir="false" afterPath="$PROJECT_DIR$/pages/admin/unassigned_ers.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/pages/app/er/er_details.php" beforeDir="false" afterPath="$PROJECT_DIR$/pages/app/er/er_details.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/pages/view_routs.php" beforeDir="false" afterPath="$PROJECT_DIR$/pages/view_routs.php" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -132,7 +127,7 @@
       <workItem from="1732804463582" duration="167000" />
       <workItem from="1732804647260" duration="1640000" />
       <workItem from="1732879450898" duration="93000" />
-      <workItem from="1733030868979" duration="10074000" />
+      <workItem from="1733030868979" duration="10910000" />
     </task>
     <servers />
   </component>

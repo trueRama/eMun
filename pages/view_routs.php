@@ -87,9 +87,14 @@ if(isset($_SESSION['user_id'])){
     //sign_up api
     elseif ($page == "signUp_user"){
         include ("api_v1/auth/sign-upController.php");
+    }
+    //login
+    elseif ($page == "login"){
+        include ("pages/auth/login.php");
     }else{
         //login user
-        include ("pages/auth/login.php");
+//        include ("pages/auth/login.php");
+        redirect("","$BASEURL?page=login");
     }
 }
 include ("includes/footer.php");

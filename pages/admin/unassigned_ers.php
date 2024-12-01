@@ -37,7 +37,7 @@ if($account_type != 'user') {
         $sql_farms = "SELECT * FROM emun_er WHERE $ed_code user_id = '$my_search' and status = 0 order  by id DESC LIMIT $this_page_first_result , $results_per_page";
     }
 }
-
+$as_label = "Patient Name";
 if($account_type == "user"){
     $view_details = 1;
 }elseif ($account_type == "admin"){
@@ -78,7 +78,7 @@ $result = mysqli_query($conn, $sql_farms);
                                                         <th>Emergency</th>
                                                         <th class="mmHide">eMUN Code</th>
                                                         <?php if($account_type != "user"){ ?>
-                                                        <th class="mmHide">Assigned to</th>
+                                                        <th class="mmHide"><?php echo $as_label; ?></th>
                                                         <th class="mmHide">Contact</th>
                                                         <?php } ?>
                                                     </tr>
@@ -112,7 +112,8 @@ $result = mysqli_query($conn, $sql_farms);
                                                                 $u_check_doc= mysqli_num_rows($query_doc);
                                                                 if($u_check_doc > 0){
                                                                     $row_check_doc = mysqli_fetch_array($query_doc, MYSQLI_ASSOC);
-                                                                    $er_user_id = $row_check_doc['user_id'];
+//                                                                    $er_user_id = $row_check_doc['user_id'];
+//                                                                    $as_label = "Assigned to";
                                                                 }
                                                             }
                                                             //patient Details
@@ -153,7 +154,7 @@ $result = mysqli_query($conn, $sql_farms);
                                                                             <p>
                                                                                 Time and Date: <?php echo $er_time; ?><br/>
                                                                                 <h6 class="mmShow">eMun Doctor: <?php echo $ed_code; ?></h6>
-                                                                                <h6 class="mmShow">Assigned to: <?php echo $p_username; ?></h6>
+                                                                                <h6 class="mmShow"><?php echo $as_label; ?>: <?php echo $p_username; ?></h6>
                                                                             </p>
                                                                             <?php if($view_details != 0){ ?>
                                                                             <form method="post" action="<?php echo $BASEURL; ?>?page=er_details">
